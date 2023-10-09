@@ -12,7 +12,12 @@ var path = require('path')
 
 
 //Initialization
+if(process.argv.length !== 3){
+    console.log("Usage: node banker.js <filename>")
+    process.exit()
+}
 let filename = process.argv[2]
+
 let n, m, allMat = [], maxMat = [], available = []
 let prodcessID, request;
 let needMat = [];
